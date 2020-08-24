@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Udemy: firstlook</title>
+    <link rel="stylesheet" th:href="@{/css/demo.css}"/>
 </head>
 <body>
 
-<p th:text="'Time on the server'+ ${theDate}"/>
+    <p th:text="'Time on the server'+ ${theDate}" class="funny"/>
 
 </body>
 </html>
