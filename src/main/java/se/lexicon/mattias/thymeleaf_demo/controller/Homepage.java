@@ -1,6 +1,7 @@
 package se.lexicon.mattias.thymeleaf_demo.controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -17,6 +18,12 @@ public class Homepage {
     // @GetMapping("/welcome") is the same thing
     public String anotherWelcomeMessage(){
         return "welcome";
+    }
+
+    @GetMapping("/udemyhtml")
+    public String sayHello(Model theModel){
+        theModel.addAttribute("theDate", new java.util.Date());
+        return "udemyhtml";
     }
 
 }
